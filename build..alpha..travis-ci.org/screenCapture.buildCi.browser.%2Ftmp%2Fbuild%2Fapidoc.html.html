@@ -1,0 +1,1523 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/wiedi/node-dmx#readme">dmx (v0.0.4)</a>
+</h1>
+<h4>DMX library and webservice</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx">module dmx</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.dmx">
+            function <span class="apidocSignatureSpan"></span>dmx
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.Animation">
+            function <span class="apidocSignatureSpan">dmx.</span>Animation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet">
+            function <span class="apidocSignatureSpan">dmx.</span>artnet
+            <span class="apidocSignatureSpan">(device_id, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro">
+            function <span class="apidocSignatureSpan">dmx.</span>enttec_usb_dmx_pro
+            <span class="apidocSignatureSpan">(device_id, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.null">
+            function <span class="apidocSignatureSpan">dmx.</span>null
+            <span class="apidocSignatureSpan">(device_id, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.super_">
+            function <span class="apidocSignatureSpan">dmx.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dmx.</span>Animation.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dmx.</span>artnet.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dmx.</span>devices</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dmx.</span>enttec_usb_dmx_pro.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dmx.</span>null.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx.Animation">module dmx.Animation</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.Animation.Animation">
+            function <span class="apidocSignatureSpan">dmx.</span>Animation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx.Animation.prototype">module dmx.Animation.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.Animation.prototype.add">
+            function <span class="apidocSignatureSpan">dmx.Animation.prototype.</span>add
+            <span class="apidocSignatureSpan">(to, duration, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.Animation.prototype.delay">
+            function <span class="apidocSignatureSpan">dmx.Animation.prototype.</span>delay
+            <span class="apidocSignatureSpan">(duration)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.Animation.prototype.run">
+            function <span class="apidocSignatureSpan">dmx.Animation.prototype.</span>run
+            <span class="apidocSignatureSpan">(universe, onFinish)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx.artnet">module dmx.artnet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet.artnet">
+            function <span class="apidocSignatureSpan">dmx.</span>artnet
+            <span class="apidocSignatureSpan">(device_id, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx.artnet.prototype">module dmx.artnet.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet.prototype.close">
+            function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>close
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet.prototype.get">
+            function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>get
+            <span class="apidocSignatureSpan">(c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet.prototype.send_universe">
+            function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>send_universe
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet.prototype.start">
+            function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet.prototype.stop">
+            function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet.prototype.update">
+            function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>update
+            <span class="apidocSignatureSpan">(u)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.artnet.prototype.updateAll">
+            function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>updateAll
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx.enttec_usb_dmx_pro">module dmx.enttec_usb_dmx_pro</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro.enttec_usb_dmx_pro">
+            function <span class="apidocSignatureSpan">dmx.</span>enttec_usb_dmx_pro
+            <span class="apidocSignatureSpan">(device_id, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx.enttec_usb_dmx_pro.prototype">module dmx.enttec_usb_dmx_pro.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.close">
+            function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>close
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.get">
+            function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>get
+            <span class="apidocSignatureSpan">(c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.send_universe">
+            function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>send_universe
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.start">
+            function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.stop">
+            function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.update">
+            function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>update
+            <span class="apidocSignatureSpan">(u)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.updateAll">
+            function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>updateAll
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx.null">module dmx.null</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.null.null">
+            function <span class="apidocSignatureSpan">dmx.</span>null
+            <span class="apidocSignatureSpan">(device_id, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dmx.null.prototype">module dmx.null.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.null.prototype.close">
+            function <span class="apidocSignatureSpan">dmx.null.prototype.</span>close
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.null.prototype.get">
+            function <span class="apidocSignatureSpan">dmx.null.prototype.</span>get
+            <span class="apidocSignatureSpan">(c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.null.prototype.start">
+            function <span class="apidocSignatureSpan">dmx.null.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.null.prototype.stop">
+            function <span class="apidocSignatureSpan">dmx.null.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.null.prototype.update">
+            function <span class="apidocSignatureSpan">dmx.null.prototype.</span>update
+            <span class="apidocSignatureSpan">(u)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dmx.null.prototype.updateAll">
+            function <span class="apidocSignatureSpan">dmx.null.prototype.</span>updateAll
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx" id="apidoc.module.dmx">module dmx</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.dmx" id="apidoc.element.dmx.dmx">
+        function <span class="apidocSignatureSpan"></span>dmx
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DMX(options) {
+	var options = options || {}
+	this.universes = {}
+	this.drivers   = {}
+	this.devices   = options.devices || require('./devices')
+
+	this.registerDriver('null',                require('./drivers/null'))
+	this.registerDriver('enttec-usb-dmx-pro',  require('./drivers/enttec-usb-dmx-pro'))
+	this.registerDriver('enttec-open-usb-dmx', require('./drivers/enttec-open-usb-dmx'))
+	this.registerDriver('artnet',              require('./drivers/artnet'))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.Animation" id="apidoc.element.dmx.Animation">
+        function <span class="apidocSignatureSpan">dmx.</span>Animation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Anim() {
+	this.fx_stack = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- generic - a one channel dimmer
+- showtec-multidim2 - 4 channel dimmer with 4A per channel
+- eurolite-led-bar - Led bar with 3 RGB color segments and some programms
+- stairville-led-par-56 - RGB LED Par Can with some programms
+
+### Class DMX.Animation
+
+#### new DMX.<span class="apidocCodeKeywordSpan">Animation</span>()
+
+Create a new DMX Animation instance. This can be chained similar to jQuery.
+
+#### animation.add(to, duration, options)
+
+- &lt;code&gt;to&lt;/code&gt; - Object, keys are channel numbers, values the values to set that channel to
+- &lt;code&gt;duration&lt;/code&gt; - Number, duration in ms
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet" id="apidoc.element.dmx.artnet">
+        function <span class="apidocSignatureSpan">dmx.</span>artnet
+        <span class="apidocSignatureSpan">(device_id, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EnttecODE(device_id, options) {
+	var self = this
+
+	self.header = new Buffer([65, 114, 116, 45, 78, 101, 116, 0, 0, 80, 0, 14])
+	self.sequence    = new Buffer([0])
+	self.physical    = new Buffer([0])
+	self.universe_id = new Buffer([0x00, 0x00])
+	self.length      = new Buffer([0x02, 0x00])
+
+	self.universe = new Buffer(512)
+	self.universe.fill(0)
+
+	self.sleepTime = 24
+
+	options = options || {}
+	self.universe_id.writeInt16BE(options.universe || 0, 0)
+	self.host = device_id || '127.0.0.1'
+	self.port = options.port || 6454
+	self.dev = dgram.createSocket('udp4')
+	self.start()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro" id="apidoc.element.dmx.enttec_usb_dmx_pro">
+        function <span class="apidocSignatureSpan">dmx.</span>enttec_usb_dmx_pro
+        <span class="apidocSignatureSpan">(device_id, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EnttecUSBDMXPRO(device_id, options) {
+	var self = this
+	options = options || {}
+	this.universe = new Buffer(512)
+	this.universe.fill(0)
+	
+	this.dev = new SerialPort(device_id, {
+		'baudrate': 250000,
+		'databits': 8,
+		'stopbits': 2,
+		'parity': 'none'
+	}, true, function(err) {
+		if(!err) {
+			self.send_universe()
+		}
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.null" id="apidoc.element.dmx.null">
+        function <span class="apidocSignatureSpan">dmx.</span>null
+        <span class="apidocSignatureSpan">(device_id, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Null(device_id, options) {
+	var self = this
+	options = options || {}
+	this.universe = new Buffer(512)
+	this.universe.fill(0)
+	self.start()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.super_" id="apidoc.element.dmx.super_">
+        function <span class="apidocSignatureSpan">dmx.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx.Animation" id="apidoc.module.dmx.Animation">module dmx.Animation</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.Animation.Animation" id="apidoc.element.dmx.Animation.Animation">
+        function <span class="apidocSignatureSpan">dmx.</span>Animation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Anim() {
+	this.fx_stack = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- generic - a one channel dimmer
+- showtec-multidim2 - 4 channel dimmer with 4A per channel
+- eurolite-led-bar - Led bar with 3 RGB color segments and some programms
+- stairville-led-par-56 - RGB LED Par Can with some programms
+
+### Class DMX.Animation
+
+#### new DMX.<span class="apidocCodeKeywordSpan">Animation</span>()
+
+Create a new DMX Animation instance. This can be chained similar to jQuery.
+
+#### animation.add(to, duration, options)
+
+- &lt;code&gt;to&lt;/code&gt; - Object, keys are channel numbers, values the values to set that channel to
+- &lt;code&gt;duration&lt;/code&gt; - Number, duration in ms
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx.Animation.prototype" id="apidoc.module.dmx.Animation.prototype">module dmx.Animation.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.Animation.prototype.add" id="apidoc.element.dmx.Animation.prototype.add">
+        function <span class="apidocSignatureSpan">dmx.Animation.prototype.</span>add
+        <span class="apidocSignatureSpan">(to, duration, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (to, duration, options) {
+	var options  = options  || {}
+	var duration = duration || resolution
+	options['easing'] = options['easing'] || 'linear'
+	this.fx_stack.push({'to': to, 'duration': duration, 'options': options})
+	return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Class DMX.Animation
+
+#### new DMX.Animation()
+
+Create a new DMX Animation instance. This can be chained similar to jQuery.
+
+#### animation.<span class="apidocCodeKeywordSpan">add</span>(to, duration, options)
+
+- &lt;code&gt;to&lt;/code&gt; - Object, keys are channel numbers, values the values to set that channel to
+- &lt;code&gt;duration&lt;/code&gt; - Number, duration in ms
+- &lt;code&gt;options&lt;/code&gt; - Object
+
+Add an animation Step.
+The options Object takes an &lt;code&gt;easing&lt;/code&gt; key which allows to set a easing function from the following
+ list:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.Animation.prototype.delay" id="apidoc.element.dmx.Animation.prototype.delay">
+        function <span class="apidocSignatureSpan">dmx.Animation.prototype.</span>delay
+        <span class="apidocSignatureSpan">(duration)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delay = function (duration) {
+	return this.add({}, duration)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- inBounce
+- outBounce
+- inOutBounce
+
+Returns a Animation object with the animation step added.
+
+
+#### animation.<span class="apidocCodeKeywordSpan">delay</span>(duration)
+
+- &lt;code&gt;duration&lt;/code&gt; - Number, duration in ms
+
+Delay the next animation step for duration.
+Returns a Animation object with the delay step added.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.Animation.prototype.run" id="apidoc.element.dmx.Animation.prototype.run">
+        function <span class="apidocSignatureSpan">dmx.Animation.prototype.</span>run
+        <span class="apidocSignatureSpan">(universe, onFinish)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (universe, onFinish) {
+	var config = {}
+	var t = 0
+	var d = 0
+	var a
+
+	var fx_stack = this.fx_stack;
+	var ani_setup = function() {
+		a = fx_stack.shift()
+		t = 0
+		d = a.duration
+		config = {}
+		for(var k in a.to) {
+			config[k] = {
+				'start': universe.get(k),
+				'end':   a.to[k]
+			}
+		}
+	}
+	var ani_step = function() {
+		var new_vals = {}
+		for(var k in config) {
+			new_vals[k] = Math.round(config[k].start + ease['linear'](t, 0, 1, d) * (config[k].end - config[k].start))
+		}
+		t = t + resolution
+		universe.update(new_vals)
+		if(t &gt; d) {
+			if(fx_stack.length &gt; 0) {
+				ani_setup()
+			} else {
+				clearInterval(iid)
+				if(onFinish) onFinish()
+			}
+		}
+	}
+
+	ani_setup()
+	var iid = setInterval(ani_step, resolution)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+- &lt;code&gt;duration&lt;/code&gt; - Number, duration in ms
+
+Delay the next animation step for duration.
+Returns a Animation object with the delay step added.
+
+
+#### animation.<span class="apidocCodeKeywordSpan">run</span>(universe, onFinish)
+
+- &lt;code&gt;universe&lt;/code&gt; - Object, reference to the universe driver
+- &lt;code&gt;onFinish&lt;/code&gt; - Function, called when the animation is done
+
+Run the Animation on the specified universe.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx.artnet" id="apidoc.module.dmx.artnet">module dmx.artnet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet.artnet" id="apidoc.element.dmx.artnet.artnet">
+        function <span class="apidocSignatureSpan">dmx.</span>artnet
+        <span class="apidocSignatureSpan">(device_id, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EnttecODE(device_id, options) {
+	var self = this
+
+	self.header = new Buffer([65, 114, 116, 45, 78, 101, 116, 0, 0, 80, 0, 14])
+	self.sequence    = new Buffer([0])
+	self.physical    = new Buffer([0])
+	self.universe_id = new Buffer([0x00, 0x00])
+	self.length      = new Buffer([0x02, 0x00])
+
+	self.universe = new Buffer(512)
+	self.universe.fill(0)
+
+	self.sleepTime = 24
+
+	options = options || {}
+	self.universe_id.writeInt16BE(options.universe || 0, 0)
+	self.host = device_id || '127.0.0.1'
+	self.port = options.port || 6454
+	self.dev = dgram.createSocket('udp4')
+	self.start()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx.artnet.prototype" id="apidoc.module.dmx.artnet.prototype">module dmx.artnet.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet.prototype.close" id="apidoc.element.dmx.artnet.prototype.close">
+        function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>close
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (cb) {
+	this.stop()
+	cb(null)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this.dev.write(msg)
+}
+
+EnttecUSBDMXPRO.prototype.start = function() {}
+EnttecUSBDMXPRO.prototype.stop = function() {}
+
+EnttecUSBDMXPRO.prototype.close = function(cb) {
+	this.dev.<span class="apidocCodeKeywordSpan">close</span>(cb)
+}
+
+EnttecUSBDMXPRO.prototype.update = function(u) {
+	for(var c in u) {
+		this.universe[c] = u[c]
+	}
+	this.send_universe()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet.prototype.get" id="apidoc.element.dmx.artnet.prototype.get">
+        function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>get
+        <span class="apidocSignatureSpan">(c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (c) {
+	return this.universe[c]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	})
+	io.set('log level', 1)
+
+	app.configure(function() {
+		app.use(connect.json())
+	})
+
+	app.<span class="apidocCodeKeywordSpan">get</span>('/', function(req, res) {
+		res.sendfile(__dirname + '/index.html')
+	})
+
+	app.get('/config', function(req, res) {
+		var response = {"devices": DMX.devices, "universes": {}}
+		Object.keys(config.universes).forEach(function(key) {
+			response.universes[key] = config.universes[key].devices
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet.prototype.send_universe" id="apidoc.element.dmx.artnet.prototype.send_universe">
+        function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>send_universe
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">send_universe = function () {
+	var pkg = Buffer.concat([
+		this.header,
+		this.sequence,
+		this.physical,
+		this.universe_id,
+		this.length,
+		this.universe
+	])
+
+	this.dev.send(pkg, 0, pkg.length, this.port, this.host)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this.dev = new SerialPort(device_id, {
+		'baudrate': 250000,
+		'databits': 8,
+		'stopbits': 2,
+		'parity': 'none'
+	}, true, function(err) {
+		if(!err) {
+			self.<span class="apidocCodeKeywordSpan">send_universe</span>()
+		}
+	})
+}
+
+EnttecUSBDMXPRO.prototype.send_universe = function() {
+	if(!this.dev.isOpen()) {
+		return
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet.prototype.start" id="apidoc.element.dmx.artnet.prototype.start">
+        function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+	this.timeout = setInterval(this.send_universe.bind(this), this.sleepTime)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	self.sleepTime = 24
+
+	options = options || {}
+	self.universe_id.writeInt16BE(options.universe || 0, 0)
+	self.host = device_id || '127.0.0.1'
+	self.port = options.port || 6454
+	self.dev = dgram.createSocket('udp4')
+	self.<span class="apidocCodeKeywordSpan">start</span>()
+}
+
+EnttecODE.prototype.send_universe = function() {
+	var pkg = Buffer.concat([
+		this.header,
+		this.sequence,
+		this.physical,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet.prototype.stop" id="apidoc.element.dmx.artnet.prototype.stop">
+        function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+	clearInterval(this.timeout)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+EnttecODE.prototype.stop = function() {
+	clearInterval(this.timeout)
+}
+
+EnttecODE.prototype.close = function(cb) {
+	this.<span class="apidocCodeKeywordSpan">stop</span>()
+	cb(null)
+}
+
+EnttecODE.prototype.update = function(u) {
+	for (var c in u) {
+		this.universe[c] = u[c]
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet.prototype.update" id="apidoc.element.dmx.artnet.prototype.update">
+        function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>update
+        <span class="apidocSignatureSpan">(u)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (u) {
+	for (var c in u) {
+		this.universe[c] = u[c]
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+DMX.prototype.addUniverse = function(name, driver, device_id) {
+	return this.universes[name] = new this.drivers[driver](device_id)
+}
+
+DMX.prototype.update = function(universe, channels) {
+	this.universes[universe].<span class="apidocCodeKeywordSpan">update</span>(channels)
+	this.emit('update', universe, channels)
+}
+
+DMX.prototype.updateAll = function(universe, value) {
+  this.universes[universe].updateAll(value)
+  this.emit('updateAll', universe, value)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.artnet.prototype.updateAll" id="apidoc.element.dmx.artnet.prototype.updateAll">
+        function <span class="apidocSignatureSpan">dmx.artnet.prototype.</span>updateAll
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateAll = function (v) {
+	for (var i = 0; i &lt; 512; i++) {
+		this.universe[i] = v
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+DMX.prototype.update = function(universe, channels) {
+	this.universes[universe].update(channels)
+	this.emit('update', universe, channels)
+}
+
+DMX.prototype.updateAll = function(universe, value) {
+  this.universes[universe].<span class="apidocCodeKeywordSpan">updateAll</span>(value)
+  this.emit('updateAll', universe, value)
+}
+
+module.exports = DMX
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx.enttec_usb_dmx_pro" id="apidoc.module.dmx.enttec_usb_dmx_pro">module dmx.enttec_usb_dmx_pro</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro.enttec_usb_dmx_pro" id="apidoc.element.dmx.enttec_usb_dmx_pro.enttec_usb_dmx_pro">
+        function <span class="apidocSignatureSpan">dmx.</span>enttec_usb_dmx_pro
+        <span class="apidocSignatureSpan">(device_id, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EnttecUSBDMXPRO(device_id, options) {
+	var self = this
+	options = options || {}
+	this.universe = new Buffer(512)
+	this.universe.fill(0)
+	
+	this.dev = new SerialPort(device_id, {
+		'baudrate': 250000,
+		'databits': 8,
+		'stopbits': 2,
+		'parity': 'none'
+	}, true, function(err) {
+		if(!err) {
+			self.send_universe()
+		}
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx.enttec_usb_dmx_pro.prototype" id="apidoc.module.dmx.enttec_usb_dmx_pro.prototype">module dmx.enttec_usb_dmx_pro.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.close" id="apidoc.element.dmx.enttec_usb_dmx_pro.prototype.close">
+        function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>close
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (cb) {
+	this.dev.close(cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this.dev.write(msg)
+}
+
+EnttecUSBDMXPRO.prototype.start = function() {}
+EnttecUSBDMXPRO.prototype.stop = function() {}
+
+EnttecUSBDMXPRO.prototype.close = function(cb) {
+	this.dev.<span class="apidocCodeKeywordSpan">close</span>(cb)
+}
+
+EnttecUSBDMXPRO.prototype.update = function(u) {
+	for(var c in u) {
+		this.universe[c] = u[c]
+	}
+	this.send_universe()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.get" id="apidoc.element.dmx.enttec_usb_dmx_pro.prototype.get">
+        function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>get
+        <span class="apidocSignatureSpan">(c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (c) {
+	return this.universe[c]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	})
+	io.set('log level', 1)
+
+	app.configure(function() {
+		app.use(connect.json())
+	})
+
+	app.<span class="apidocCodeKeywordSpan">get</span>('/', function(req, res) {
+		res.sendfile(__dirname + '/index.html')
+	})
+
+	app.get('/config', function(req, res) {
+		var response = {"devices": DMX.devices, "universes": {}}
+		Object.keys(config.universes).forEach(function(key) {
+			response.universes[key] = config.universes[key].devices
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.send_universe" id="apidoc.element.dmx.enttec_usb_dmx_pro.prototype.send_universe">
+        function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>send_universe
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">send_universe = function () {
+	if(!this.dev.isOpen()) {
+		return
+	}
+	var hdr = Buffer([
+		ENTTEC_PRO_START_OF_MSG,
+		ENTTEC_PRO_SEND_DMX_RQ,
+		 (this.universe.length + 1)       &amp; 0xff,
+		((this.universe.length + 1) &gt;&gt; 8) &amp; 0xff,
+		ENTTEC_PRO_DMX_STARTCODE
+	])
+
+	var msg = Buffer.concat([
+		hdr,
+		this.universe,
+		Buffer([ENTTEC_PRO_END_OF_MSG])
+	])
+	this.dev.write(msg)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this.dev = new SerialPort(device_id, {
+		'baudrate': 250000,
+		'databits': 8,
+		'stopbits': 2,
+		'parity': 'none'
+	}, true, function(err) {
+		if(!err) {
+			self.<span class="apidocCodeKeywordSpan">send_universe</span>()
+		}
+	})
+}
+
+EnttecUSBDMXPRO.prototype.send_universe = function() {
+	if(!this.dev.isOpen()) {
+		return
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.start" id="apidoc.element.dmx.enttec_usb_dmx_pro.prototype.start">
+        function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	self.sleepTime = 24
+
+	options = options || {}
+	self.universe_id.writeInt16BE(options.universe || 0, 0)
+	self.host = device_id || '127.0.0.1'
+	self.port = options.port || 6454
+	self.dev = dgram.createSocket('udp4')
+	self.<span class="apidocCodeKeywordSpan">start</span>()
+}
+
+EnttecODE.prototype.send_universe = function() {
+	var pkg = Buffer.concat([
+		this.header,
+		this.sequence,
+		this.physical,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.stop" id="apidoc.element.dmx.enttec_usb_dmx_pro.prototype.stop">
+        function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+EnttecODE.prototype.stop = function() {
+	clearInterval(this.timeout)
+}
+
+EnttecODE.prototype.close = function(cb) {
+	this.<span class="apidocCodeKeywordSpan">stop</span>()
+	cb(null)
+}
+
+EnttecODE.prototype.update = function(u) {
+	for (var c in u) {
+		this.universe[c] = u[c]
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.update" id="apidoc.element.dmx.enttec_usb_dmx_pro.prototype.update">
+        function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>update
+        <span class="apidocSignatureSpan">(u)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (u) {
+	for(var c in u) {
+		this.universe[c] = u[c]
+	}
+	this.send_universe()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+DMX.prototype.addUniverse = function(name, driver, device_id) {
+	return this.universes[name] = new this.drivers[driver](device_id)
+}
+
+DMX.prototype.update = function(universe, channels) {
+	this.universes[universe].<span class="apidocCodeKeywordSpan">update</span>(channels)
+	this.emit('update', universe, channels)
+}
+
+DMX.prototype.updateAll = function(universe, value) {
+  this.universes[universe].updateAll(value)
+  this.emit('updateAll', universe, value)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.enttec_usb_dmx_pro.prototype.updateAll" id="apidoc.element.dmx.enttec_usb_dmx_pro.prototype.updateAll">
+        function <span class="apidocSignatureSpan">dmx.enttec_usb_dmx_pro.prototype.</span>updateAll
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateAll = function (v){
+	for(var i = 0; i &lt; 512; i++) {
+		this.universe[i] = v
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+DMX.prototype.update = function(universe, channels) {
+	this.universes[universe].update(channels)
+	this.emit('update', universe, channels)
+}
+
+DMX.prototype.updateAll = function(universe, value) {
+  this.universes[universe].<span class="apidocCodeKeywordSpan">updateAll</span>(value)
+  this.emit('updateAll', universe, value)
+}
+
+module.exports = DMX
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx.null" id="apidoc.module.dmx.null">module dmx.null</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.null.null" id="apidoc.element.dmx.null.null">
+        function <span class="apidocSignatureSpan">dmx.</span>null
+        <span class="apidocSignatureSpan">(device_id, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Null(device_id, options) {
+	var self = this
+	options = options || {}
+	this.universe = new Buffer(512)
+	this.universe.fill(0)
+	self.start()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dmx.null.prototype" id="apidoc.module.dmx.null.prototype">module dmx.null.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.null.prototype.close" id="apidoc.element.dmx.null.prototype.close">
+        function <span class="apidocSignatureSpan">dmx.null.prototype.</span>close
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (cb) {
+	cb(null)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this.dev.write(msg)
+}
+
+EnttecUSBDMXPRO.prototype.start = function() {}
+EnttecUSBDMXPRO.prototype.stop = function() {}
+
+EnttecUSBDMXPRO.prototype.close = function(cb) {
+	this.dev.<span class="apidocCodeKeywordSpan">close</span>(cb)
+}
+
+EnttecUSBDMXPRO.prototype.update = function(u) {
+	for(var c in u) {
+		this.universe[c] = u[c]
+	}
+	this.send_universe()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.null.prototype.get" id="apidoc.element.dmx.null.prototype.get">
+        function <span class="apidocSignatureSpan">dmx.null.prototype.</span>get
+        <span class="apidocSignatureSpan">(c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (c) {
+	return this.universe[c]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	})
+	io.set('log level', 1)
+
+	app.configure(function() {
+		app.use(connect.json())
+	})
+
+	app.<span class="apidocCodeKeywordSpan">get</span>('/', function(req, res) {
+		res.sendfile(__dirname + '/index.html')
+	})
+
+	app.get('/config', function(req, res) {
+		var response = {"devices": DMX.devices, "universes": {}}
+		Object.keys(config.universes).forEach(function(key) {
+			response.universes[key] = config.universes[key].devices
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.null.prototype.start" id="apidoc.element.dmx.null.prototype.start">
+        function <span class="apidocSignatureSpan">dmx.null.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+	var self = this
+	self.timeout = setInterval(function() {
+		console.log(self.universe)
+	}, 1000)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	self.sleepTime = 24
+
+	options = options || {}
+	self.universe_id.writeInt16BE(options.universe || 0, 0)
+	self.host = device_id || '127.0.0.1'
+	self.port = options.port || 6454
+	self.dev = dgram.createSocket('udp4')
+	self.<span class="apidocCodeKeywordSpan">start</span>()
+}
+
+EnttecODE.prototype.send_universe = function() {
+	var pkg = Buffer.concat([
+		this.header,
+		this.sequence,
+		this.physical,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.null.prototype.stop" id="apidoc.element.dmx.null.prototype.stop">
+        function <span class="apidocSignatureSpan">dmx.null.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+	clearInterval(this.timeout)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+EnttecODE.prototype.stop = function() {
+	clearInterval(this.timeout)
+}
+
+EnttecODE.prototype.close = function(cb) {
+	this.<span class="apidocCodeKeywordSpan">stop</span>()
+	cb(null)
+}
+
+EnttecODE.prototype.update = function(u) {
+	for (var c in u) {
+		this.universe[c] = u[c]
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.null.prototype.update" id="apidoc.element.dmx.null.prototype.update">
+        function <span class="apidocSignatureSpan">dmx.null.prototype.</span>update
+        <span class="apidocSignatureSpan">(u)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (u) {
+	for(var c in u) {
+		this.universe[c] = u[c]
+	}
+	console.log(this.universe)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+DMX.prototype.addUniverse = function(name, driver, device_id) {
+	return this.universes[name] = new this.drivers[driver](device_id)
+}
+
+DMX.prototype.update = function(universe, channels) {
+	this.universes[universe].<span class="apidocCodeKeywordSpan">update</span>(channels)
+	this.emit('update', universe, channels)
+}
+
+DMX.prototype.updateAll = function(universe, value) {
+  this.universes[universe].updateAll(value)
+  this.emit('updateAll', universe, value)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dmx.null.prototype.updateAll" id="apidoc.element.dmx.null.prototype.updateAll">
+        function <span class="apidocSignatureSpan">dmx.null.prototype.</span>updateAll
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateAll = function (v){
+	for(var i = 0; i &lt; 512; i++) {
+		this.universe[i] = v
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+DMX.prototype.update = function(universe, channels) {
+	this.universes[universe].update(channels)
+	this.emit('update', universe, channels)
+}
+
+DMX.prototype.updateAll = function(universe, value) {
+  this.universes[universe].<span class="apidocCodeKeywordSpan">updateAll</span>(value)
+  this.emit('updateAll', universe, value)
+}
+
+module.exports = DMX
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
